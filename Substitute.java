@@ -63,31 +63,4 @@ public class Substitute {
 		System.out.println("Final/real price/decodedValue for each item/product code, after being comapred with the key:  decodedValue = " + sObj.getValue("CRYSTALBUM", "CMMA")); //this is case sensitive.
 
 	}
-	
-	/*
-	 * Original Code Without Notes:
-	 * 
-	 * import java.util.*;
-public class Substitute {
-    public int getValue(String key, String code) {
-        HashMap<Character, Integer> key_map = new HashMap<Character, Integer>();
-        for(int i=0; i<key.length(); i++) {
-            key_map.put(key.charAt(i), (i+1)%10);
-        }
-
-        int ret = 0;
-        for(int i=0; i<code.length(); i++) {
-            char C = code.charAt(i);
-            if(!key_map.containsKey(C)) 
-                continue;
-            ret = ret*10 + key_map.get(C);
-        }
-        return ret;
-
-  }
-    }
-	 * 
-	 * 
-	 */
-
 }
